@@ -1,0 +1,20 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Phonology}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Grammar }{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Nouns, Pronouns and Adjectives}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Verbs and Adverbs }{11}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Particles}{11}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{OOC Afterward }{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{English to Kli{\ng }on\IeC {\'a}se Dictionary}{17}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Kli{\ng }on\IeC {\'a}se to English Dictionary}{18}
+\contentsfinish 
