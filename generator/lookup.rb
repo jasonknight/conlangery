@@ -17,15 +17,18 @@ class Lookup
 	    	puts $!.inspect
 	    end	
 	end
-	def remove_all_word(word_id)
+	def remove_all_word(word)
 	    dataset = @db[:words]
-	    word = Target::Word.find(:word_id => word_id)
-	    word.remove_completely
-	    begin
-	    	word.delete
-	    rescue
-	    	puts $!.inspect
-	    end	
+	    words = dataset.where(:english => word)
+	    words.each do |w|
+	    	word = Target::Word.find(:word_id => w[:word_id])
+		    word.remove_completely
+		    begin
+		    	word.delete
+		    rescue
+		    	puts $!.inspect
+		    end	
+		end
 	end
 	def create_word
 		insert_new_word_from_input
@@ -82,10 +85,11 @@ class Lookup
                 end
             end
         elsif inp.match /^remove all / then
-        	num = inp.scan(/^remove all (\d+)/)
+        	num = inp.scan(/^remove all (.*)/)
             if num then
-                num.each do |n|
-                   remove_all_word(n[0].to_i) 
+            	words = num[0].split(',')
+                words.each do |n|
+                   remove_all_word(n) 
                 end
             end
         elsif inp.match(/^defn /) then

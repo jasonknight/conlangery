@@ -27,6 +27,17 @@ Honorable being: epetai and epotai
 
 Male/Female Dog: ezai makh and ozai makh
 
+Cases:
+
+Nominative: None
+Accusative: era
+Dative: 'la
+Ablative: sikh
+Genitive: te
+Vocative: to
+Locative: dak
+Instrumental: ka
+
 From Sappho:
 
 	Shimmering-throned immortal Aphrodite,
@@ -54,7 +65,7 @@ From Sappho:
 	And bringing thee through the infinite, gliding
 	     Downwards from heaven,
 
-	vaindak athotaite ket fathe psikhon kobega ka,
+	vainka athotaite ket fathe psikhon kobega,
 	pidonte ravdo urmet ket fodaht vologa,
 	athotai steovaga kathonur, haansikh usham
 		porseso
@@ -68,8 +79,10 @@ From Sappho:
 	nakhat tolaht ngadopana ka, u tsoguso't
 	daifu thoazh u psarana jal dezra hais,
 		athotai thaemosa suth 
-		
+
 	What in my mad heart was my greatest desire,
 	Who was it now that must feel my allurements,
 	Who was the fair one that must be persuaded,
 	     Who wronged thee Sappho?
+
+	ute vagejdak sahul't
