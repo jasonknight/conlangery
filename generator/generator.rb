@@ -56,7 +56,7 @@ double_vowels = ['aa','ee']
     # middle_syllables += ['akk','ukk','ath','ith','uth','urk','est','ast','ust','ang','eng','agy','ugy','antr','entr','untr','ant','unt','ent']
     beginnings = ( consonants + consonants_followed_by_a_consonant).join(',')
 
-    verb_endings = "al,ul,or,ar"
+    verb_endings = "a,e,o,u"
     endings = ''
     tactics = Phonotactics.new
     tactics.consonants     = consonants + consonants_followed_by_a_consonant
@@ -66,17 +66,18 @@ double_vowels = ['aa','ee']
            .set_verb_tactic( :middle,    middle_syllables.join(',') )
            .set_verb_tactic( :end,       verb_endings )
 
-    noun_endings = "ej,oj,an,on,ahd,arn,ahn,od,id,aht,os,ahm"
+    #noun_endings = "ej,oj,an,on,ahd,arn,ahn,od,id,aht,os,ahm"
+    noun_endings = "e,u,o,ej,oj,aj,ahj,ohj,a,on,ohn,uhn,un,az,azh,ahd,ahn,od,aht,ahm"
     tactics.set_noun_tactic( :start,     beginnings  )
            .set_noun_tactic( :middle,    (middle_syllables + double_vowels).join(',') )
            .set_noun_tactic( :end,       noun_endings )
 
-    adj_endings = "et,u,as,yd"
+    adj_endings = "e"
     tactics.set_adjective_tactic( :start,     beginnings  )
            .set_adjective_tactic( :middle,    middle_syllables.join(',') )
            .set_adjective_tactic( :end,       adj_endings )
 
-    adv_endings = "ay,es,ut,ase,ave"
+    adv_endings = "a,e"
     tactics.set_adverb_tactic( :start,     beginnings  )
            .set_adverb_tactic( :middle,    middle_syllables.join(',') )
            .set_adverb_tactic( :end,       adv_endings )
