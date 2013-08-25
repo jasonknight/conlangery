@@ -20,8 +20,10 @@ class Lookup
 	def remove_all_word(word)
 	    dataset = @db[:words]
 	    words = dataset.where(:english => word)
-	    words.each do |w|
-	    	word = Target::Word.find(:word_id => w[:word_id])
+	    to_delete = []
+	    words.each {|w| to_delete << w[:word_id] }
+	    to_delete.each do |wid|
+	    	word = Target::Word.find(:word_id => wid)
 		    word.remove_completely
 		    begin
 		    	word.delete
@@ -85,9 +87,10 @@ class Lookup
                 end
             end
         elsif inp.match /^remove all / then
+        	puts "Removing All"
         	num = inp.scan(/^remove all (.*)/)
             if num then
-            	words = num[0].split(',')
+            	words = num[0][0].split(',')
                 words.each do |n|
                    remove_all_word(n) 
                 end

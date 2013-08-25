@@ -38,6 +38,13 @@ Vocative: to
 Locative: dak
 Instrumental: ka
 
+first person: sa
+first person plural: samae
+second person: so
+second person plural: somae
+third person: na
+third person plural: ga
+
 From Sappho:
 
 	Shimmering-throned immortal Aphrodite,
@@ -85,4 +92,25 @@ From Sappho:
 	Who was the fair one that must be persuaded,
 	     Who wronged thee Sappho?
 
-	ute vagejdak sahul't
+	ute kuyu thevej ute tsiethe vagejdak sahuna't jal,
+	ute thitaht ngiakona maldena sahuna't toora
+	hita tsedan'la kraegona maldena sahuna't toora
+		SAPPHOtera tursana toora
+
+	For if now she flees, quickly she shall follow
+	And if she spurns gifts, soon shall she offer them
+	Yea, if she knows not love, soon shall she feel it
+	     Even reluctant.
+
+	Come then, I pray, grant me surcease from sorrow,
+	Drive away care, I beseech thee, O goddess
+	Fulfil for me what I yearn to accomplish,
+	     Be thou my ally.
+
+	He who learns must suffer
+	And even in our sleep pain that cannot forget
+	Falls drop by drop upon the heart,
+	And in our own despite, against our will,
+	Comes wisdom to us by the awful grace of God.
+
+	daiduna'yi todana maldena
