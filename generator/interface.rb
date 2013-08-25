@@ -61,6 +61,7 @@ class Interface
   def generate_suggestions
     @suggestions = []
     i = 0
+    return if not @word
     @word.definitions.each do |pos,defns|
       base_word = nil
       defns.each do |defn|

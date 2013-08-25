@@ -36,8 +36,16 @@ class Lookup
 		inp = $stdin.gets.chomp
 		puts "Input is: #{inp}"
 		if inp.match /^l / then
-			res = inp.scan(/l (.*)/)
+			res = inp.scan(/^l (.*)/)
             find(res[0][0]) if res
+        elsif inp.match(/^english (.*)/) then
+        	puts " english found"
+			res = inp.scan(/^english (.*)/)
+			puts res.inspect
+            find2(res[0][0],:english) if res
+        elsif inp.match(/^target (.*)/) then
+			res = inp.scan(/^target (.*)/)
+            find2(res[0][0],:target_language) if res
         elsif inp.match /^x / then
         	num = inp.scan(/(\d+)/)
             if num then
@@ -65,7 +73,9 @@ class Lookup
         	@quit = true
         	return
         elsif inp.match /^c / then
+        	puts "Copying"
         	num = inp.scan(/^c (\d+)/)
+        	puts num.inspect
             if num then
                 num.each do |n|
                    copy_record(n[0].to_i,inp) 
@@ -131,6 +141,25 @@ class Lookup
 	    	end
 	    }
 	    results2.each {|row| 
+	    	if not ids_seen.include? row[:word_id]
+	    		@results << row
+	    		ids_seen << row[:word_id]
+	    	end
+	    }
+	    print "and #{@results.length} where found.\n"
+	    display_small_entries(@results)
+	end
+	def find2(word,type)
+		@results = []
+		dataset = @db[:words]
+		ids_seen = []
+	    print "Searching #{dataset.count} records "
+	    if type == :english then
+	    	results = dataset.grep(:english, "#{word}%")
+	    else
+	    	results = dataset.grep(:target_language, "#{word}%")
+	    end
+	    results.each {|row| 
 	    	if not ids_seen.include? row[:word_id]
 	    		@results << row
 	    		ids_seen << row[:word_id]

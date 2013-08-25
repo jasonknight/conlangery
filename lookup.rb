@@ -18,9 +18,17 @@ class Lookup
 	def choose
 		return if @quit
 		inp = gets.chomp
-		if inp.index('l ') == 0 then
-			res = inp.scan(/l (.*)/)
+		if inp.match(/^l (.*)/) then
+			res = inp.scan(/^l (.*)/)
             find(res[0][0]) if res
+        elsif inp.match(/^english (.*)/) then
+        	puts " english found"
+			res = inp.scan(/^english (.*)/)
+			puts res.inspect
+            find2(res[0][0],:english) if res
+        elsif inp.index('target ') == 0 then
+			res = inp.scan(/target (.*)/)
+            find2(res[0][0],:target_language) if res
         elsif inp.include? 'x ' then
         	num = inp.scan(/(\d+)/)
             if num then
@@ -47,7 +55,7 @@ class Lookup
         elsif inp == 'q' then
         	@quit = true
         	return
-        elsif inp.include? 'c ' then
+        elsif inp.index('c ') == 0 then
         	num = inp.scan(/(\d+)/)
             if num then
                 num.each do |n|
@@ -81,7 +89,7 @@ class Lookup
 		ids_seen = []
 	    print "Searching #{dataset.count} records "
 	    results = dataset.grep(:english, "%#{word}%")
-	    results2 = dataset.grep(:klingon, "%#{word}%")
+	    results2 = dataset.grep(:target_language, "%#{word}%")
 	    results.each {|row| 
 	    	if not ids_seen.include? row[:word_id]
 	    		@results << row
@@ -89,6 +97,25 @@ class Lookup
 	    	end
 	    }
 	    results2.each {|row| 
+	    	if not ids_seen.include? row[:word_id]
+	    		@results << row
+	    		ids_seen << row[:word_id]
+	    	end
+	    }
+	    print "and #{@results.length} where found.\n"
+	    display_small_entries(@results)
+	end
+	def find2(word,type)
+		@results = []
+		dataset = @db[:words]
+		ids_seen = []
+	    print "Searching #{dataset.count} records "
+	    if type == :english then
+	    	results = dataset.grep(:english, "#{word}%")
+	    else
+	    	results = dataset.grep(:target_language, "#{word}%")
+	    end
+	    results.each {|row| 
 	    	if not ids_seen.include? row[:word_id]
 	    		@results << row
 	    		ids_seen << row[:word_id]
@@ -112,7 +139,7 @@ class Lookup
 		num = sprintf '#%d',row[:word_id].to_i
         eng = row[:english]
         pos = row[:part_of_speech]
-        kli = row[:klingon]
+        kli = row[:target_language]
         defn = word_wrap( row[:definition] )
         puts %Q[#{num} #{eng} (#{pos}) : #{kli}
 #{hr()}
@@ -132,7 +159,7 @@ class Lookup
 		num = sprintf '#% 5d',row[:word_id].to_i
 		eng = sprintf '% 30s', row[:english]
     	pos = pos_to_abbrev row[:part_of_speech]
-    	kli = sprintf '% 30s', row[:klingon]
+    	kli = sprintf '% 30s', row[:target_language]
 		entry = "#{num} #{eng} (#{pos}) #{kli}\n#{row[:definition][0,60]}"
 		return entry
 	end
@@ -160,7 +187,7 @@ class Lookup
 			return
 		end
 		new_word = {}
-		keys = [:english, :part_of_speech, :definition, :klingon]
+		keys = [:english, :part_of_speech, :definition, :target_language]
 		keys.each do |k|
 			new_word[k] = sword[k]
 		end
@@ -177,7 +204,7 @@ class Lookup
 			puts $!
 			return
 		end
-		keys = [:english, :part_of_speech, :definition, :klingon]
+		keys = [:english, :part_of_speech, :definition, :target_language]
 		new_values = {}
 		dirty = false
 		keys.each do |k|
@@ -198,7 +225,7 @@ class Lookup
 	    puts "Inserting a new word"
 	    dataset = @db[:words]
 	    data = {}
-	    keys = [:english, :part_of_speech, :definition, :klingon]
+	    keys = [:english, :part_of_speech, :definition, :target_language]
 	    keys.each do |k|
 	        print "#{k}: "
 	        data[k] = gets.chomp

@@ -2,7 +2,7 @@ If john comes or Mary comes and Bill agrees, let's go to the movies.
 
 pilasot JOHN tel pilasot MARY jo meppasot BILL sug zidiget k'artadak juthes
 
-comes JOHN or comes Mary and agrees Bill IF we go cinema[to] therefore
+comes JOHN or comes Mary and agrees Bill IF we go cinema[tol] therefore
 
 Noun Classes
 
@@ -13,13 +13,63 @@ Noun Classes
    V: Dishonorable People
 
 Gender: etai and otai for male/female ezai and ozai for Animals
+Gender for Servants, Slaves: thal, thol
+Gender for Dishonorable: ez, ox
+
+Dishonorable Whore: ox t'aijan 
 
 Secretary: gavonetai or gavonotai
-Whore: t'aijanetai or t'aijanotai
+Whore: etai t'aijan or otai t'aijan
 
-Honorable Whore: t'aijanepotai
+Honorable Whore: epotai t'aijan 
 
 Honorable being: epetai and epotai
 
-Male/Female Dog: makhezai and makhozai
+Male/Female Dog: ezai makh and ozai makh
 
+From Sappho:
+
+	Shimmering-throned immortal Aphrodite,
+	Daughter of Zeus, Enchantress, I implore thee,
+	Spare me, O queen, this agony and anguish,
+	     Crush not my spirit
+
+	eryn-vaatho't otai tsamazh APHRODITE,
+	ZEUSte solai, otai feolazh, saron vaakresa 
+	u deothuso, athotai vaadonto, hibahn zha taidazh sith
+		ute zhavaan bae vestuso ar 
+
+	Whenever before thou has hearkened to me--
+	To my voice calling to thee in the distance,
+	And heeding, thou hast come, leaving thy father's
+	     Golden dominions,
+
+	psudiso't stojave 
+	athotai baidansikh ute psaidaase thaemona nor
+	rejaso't, athotaite bukkahdte sulojet vaadarsaj 
+		ga'uso't
+
+	With chariot yoked to thy fleet-winged coursers,
+	Fluttering swift pinions over earth's darkness,
+	And bringing thee through the infinite, gliding
+	     Downwards from heaven,
+
+	vaindak athotaite ket fathe psikhon kobega ka,
+	pidonte ravdo urmet ket fodaht vologa,
+	athotai steovaga kathonur, haansikh usham
+		porseso
+		
+	Then, soon they arrived and thou, blessed goddess,
+	With divine contenance smiling, didst ask me
+	What new woe had befallen me now and why,
+	     Thus I had called the.
+
+	kaipurz athotai k'uunto, pilaga't zha pilaso't thinave
+	nakhat tolaht ngadopana ka, u tsoguso't
+	daifu thoazh u psarana jal dezra hais,
+		athotai thaemosa suth 
+		
+	What in my mad heart was my greatest desire,
+	Who was it now that must feel my allurements,
+	Who was the fair one that must be persuaded,
+	     Who wronged thee Sappho?
