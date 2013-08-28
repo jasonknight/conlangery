@@ -45,6 +45,26 @@ second person plural: somae
 third person: na
 third person plural: ga
 
+Pronouns:
+
+I: u
+We/Us: taab
+You: ba
+You Plural: bas
+He: na
+She: ai
+It: lu
+They: lur
+
+Polite:
+
+You: otai(Fem) etai (Masc)
+Very Polite: epetai (Masc) epotai (Fem)
+Royalty, Dignitaries; athotai (Fem) athetai (Masc)
+
+Also used as a gender marker. 
+
+
 From Sappho:
 
 	Shimmering-throned immortal Aphrodite,
@@ -52,8 +72,8 @@ From Sappho:
 	Spare me, O queen, this agony and anguish,
 	     Crush not my spirit
 
-	eryn-vaatho't otai tsamazh APHRODITE,
-	ZEUSte solai, otai feolazh, saron vaakresa 
+	eryn-vaatho't tsamazh APHRODITE,
+	ZEUSte solai, athotai feolazh, saron vaakresa 
 	u deothuso, athotai vaadonto, hibahn zha taidazh sith
 		ute zhavaan bae vestuso ar 
 
@@ -114,3 +134,12 @@ From Sappho:
 	Comes wisdom to us by the awful grace of God.
 
 	daiduna'yi todana maldena
+	-- [he/she/it learns][one who does it] [he/she/it suffers][must]
+	vagejdak mottabae oraan psifana 
+	-- [heart][to] [forgettable][not] [pain] [it falls as drops]
+	gaires taabte garitondak 
+	-- [even] [our] [sleep][in]
+	taabte pulahndak zha taabte yigoj duana 
+	-- [our] [sadness][in] [and] [our] [will] [it opposes]
+	taabdak favos pilana dagurai gesonka
+	-- [us][to] [wisdom] [it comes] [awful] [grace of god][by]
