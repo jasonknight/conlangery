@@ -27,7 +27,7 @@ module Target
     return DB[:words].with_sql('select count(DISTINCT target_language) as num_records from words').first[:num_records]
   end
   def self.count_english
-    return DB[:words].with_sql('select count(DISTINCT english) as num_records from words').first[:num_records]
+    return DB[:words].with_sql("select count(DISTINCT english) as num_records from words where english NOT LIKE '% %'").first[:num_records]
   end
   def self.count_verbs
     return DB[:words].with_sql("select count(*) as num_records from words where part_of_speech = 'verb'").first[:num_records]

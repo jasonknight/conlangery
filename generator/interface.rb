@@ -109,12 +109,13 @@ class Interface
   end
   def show_hud
     return if @quit == true
-    print "Words(#{Target.count}/#{Target.total_words}) Help(?): "
+    print "Words(#{Target.count}/#{Target::count_english}/#{Target.total_words}) Help(?): "
     choose_option()
   end
   def set_var(inp)
     parts = inp.scan(/^set ([\w]+) (.*)/)
     parts[0][1] = nil if parts[0][1] == 'nil'
+    parts[0][1] = "" if parts[0][1] == "''"
     instance_variable_set("@#{parts[0][0]}".to_sym,parts[0][1])
     puts "New value of @#{parts[0][0]} is: " + instance_variable_get("@#{parts[0][0]}".to_sym).inspect
   end
